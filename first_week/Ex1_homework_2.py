@@ -9,8 +9,8 @@ b = [int (i) for i in b]
 c= []
 maxlenght = a if len(a)>len(b) else b
 for i in range(len(maxlenght)):
-    if (i<len(a if len(a)<len(b) else b)-1) :
+    if (i<len(a if len(a)<len(b) else b)) :
         c.append(min(a[i],b[i]))
     else: c.append(maxlenght[i])
     
-print ("Mang su khi tron: ",c);
+print ("Mang sau khi tron: ",c);
