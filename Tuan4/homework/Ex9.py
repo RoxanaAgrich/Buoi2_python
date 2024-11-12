@@ -18,7 +18,7 @@ from datetime import datetime
 class SinhVien:
     def __init__(self, masv, ten, namsinh, tb):
         self.Ma = masv
-        self.Ten = ten  # Sửa lỗi dấu '-' thành '='
+        self.Ten = ten
         self.NamSinh = namsinh
         self.TrungBinh = tb
 
@@ -26,8 +26,8 @@ class SinhVien:
         return self.TrungBinh >= 5
 
     def is20(self):
-        current_year = datetime.now().year
-        return current_year - self.NamSinh >= 20
+        current = datetime.now().year
+        return current - self.NamSinh >= 20
 
     def isDH(self):
         return self.Ma[2:4] == "DH"
@@ -35,40 +35,40 @@ class SinhVien:
 
 class SinhVienManager:
     def __init__(self):
-        self.danh_sach_sv = []
+        self.dsSV = []
 
     def Add_std(self, masv, ten, namsinh, tb):
         sinh_vien = SinhVien(masv, ten, namsinh, tb)
-        self.danh_sach_sv.append(sinh_vien)
+        self.dsSV.append(sinh_vien)
 
     def svdudieukien(self):
-        return sum(sv.is_qualified() for sv in self.danh_sach_sv)
+        return sum(sv.is_qualified() for sv in self.dsSV)
 
-    def xuat_sv_20_tuoi(self):
-        sv_20_tuoi = [sv for sv in self.danh_sach_sv if sv.is20()]
-        return sv_20_tuoi
+    def xuatSv20(self):
+        sv = [sv for sv in self.dsSV if sv.is20()]
+        return sv
 
     def dem_sv_dh(self):
-        return sum(sv.isDH() for sv in self.danh_sach_sv)
+        return sum(sv.isDH() for sv in self.dsSV)
 
-    def xem_danh_sach(self):
-        if not self.danh_sach_sv:
-            print("Danh sách sinh viên trống.")
+    def Show(self):
+        if not self.dsSV:
+            print("Danh sach sv rong.")
         else:
-            print("Danh sách sinh viên:")
-            for sv in self.danh_sach_sv:
+            print("Danh sach sv:")
+            for sv in self.dsSV:
                 print(f"Mã SV: {sv.Ma}, Tên: {sv.Ten}, Năm sinh: {sv.NamSinh}, Điểm TB: {sv.TrungBinh}")
 
-    def xoa_sinh_vien(self, masv):
-        for sv in self.danh_sach_sv:
+    def Dlt_std(self, masv):
+        for sv in self.dsSV:
             if sv.Ma == masv:
-                self.danh_sach_sv.remove(sv)
-                print("Xóa sinh viên thành công.")
+                self.dsSV.remove(sv)
+                print("Thanh cong.")
                 return
-        print("Không tìm thấy sinh viên với mã này.")
+        print("Khong tim thay ma.")
 
-    def Editsv(self, masv, new_ten=None, new_namsinh=None, new_tb=None):
-        for sv in self.danh_sach_sv:
+    def Editsv(self, masv, new_ten, new_namsinh, new_tb):
+        for sv in self.dsSV:
             if sv.Ma == masv:
                 if new_ten:
                     sv.Ten = new_ten
@@ -76,18 +76,18 @@ class SinhVienManager:
                     sv.NamSinh = new_namsinh
                 if new_tb:
                     sv.TrungBinh = new_tb
-                print("Sửa thông tin sinh viên thành công.")
+                print("Thanh cong.")
                 return
-        print("Không tìm thấy sinh viên với mã này.")
+        print("Khong tim thay ma.")
     def findLan(self):
         cnt =0
-        for i in self.danh_sach_sv:
+        for i in self.dsSV:
             temp = i.split(" ")
             if temp[len(temp)-1].casefold() == "Lan".casefold(): cnt+=1
         return cnt
     def findFirstNamePhan(self):
         cnt =0
-        for i in self.danh_sach_sv:
+        for i in self.dsSV:
             temp = i.split(" ")
             if temp[0].casefold() == "Phan".casefold(): cnt+=1
         return cnt
