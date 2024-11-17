@@ -1,3 +1,12 @@
+"""Xây dựng một lớp lớp người (Person). Bao gồm các thuộc tính như tên, quốc gia và ngày sinh và các phương thức:
+ Xác định tuổi của người đó.
+ In ra thông tin của người đó:
+Person 1:
+Name: Nguyễn Văn Nam
+Country: Việt nam
+Date of Birth: 1962-07-12
+Age: 60
+    """
 from datetime import datetime
 
 class Person:

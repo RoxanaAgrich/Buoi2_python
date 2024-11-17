@@ -1,3 +1,14 @@
+"""Tạo ba lớp, Person có 2 thuộc tính: name, age, Employee (Nhân viên) có 2 thuộc tính: emp_id, salary và Student (Sinh viên) có 2 thuộc tính: student_id , grade
+Sử dụng nhiều kế thừa để tạo một lớp “PersonInfo” kế thừa từ cả “Nhân viên” và “Sinh viên”.
+Thêm các thuộc tính và phương thức cụ thể cho từng lớp.
+Ví dụ: PersonInfo("John", 30, "E123", 50000, "S456", "A")
+Kết quả:
+Name: John
+Age: 30
+Employee ID: E123
+Salary: 50000
+Student ID: S456
+Grade: A"""
 class Person:
     def __init__(self, name, age):
         self.name = name

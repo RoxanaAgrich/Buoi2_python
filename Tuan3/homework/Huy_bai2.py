@@ -1,3 +1,9 @@
+"""Xây dựng một lớp phân số (Fraction) có các thuộc tính: Tử số, mẫu số và các phương thức:
+ Phương thức tạo để khởi tạo giá trị cho tử số và mẫu số
+ Các phương nhập, xuất, rút gọn, nghịch đảo phân số
+ Các phương thức cộng (add), trừ (sub), nhân (mul), chia (div), hai phân số.
+    """
+
 import math
 
 class Fraction:
