@@ -1,0 +1,77 @@
+[
+    {
+        "name": "To Mockingbird",
+        "author": "Harper Lee",
+        "date": "1960-07-11"
+    },
+    {
+        "name": "1984",
+        "author": "George Orwell",
+        "date": "1949-06-08"
+    },
+    {
+        "name": "The Great",
+        "author": "F. Scott Fitzgerald",
+        "date": "1925-04-10"
+    },
+    {
+        "name": "The Catcher",
+        "author": "J.D. Salinger",
+        "date": "1951-07-16"
+    },
+    {
+        "name": "Moby-Dick",
+        "author": "Herman Melville",
+        "date": "1851-10-18"
+    },
+    {
+        "name": "Pride",
+        "author": "Jane Austen",
+        "date": "1813-01-28"
+    },
+    {
+        "name": "The Lord Rings",
+        "author": "J.R.R. Tolkien",
+        "date": "1954-07-29"
+    },
+    {
+        "name": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "date": "1937-09-21"
+    },
+    {
+        "name": "Harry Potter",
+        "author": "J.K. Rowling",
+        "date": "1997-06-26"
+    },
+    {
+        "name": "The Chronicles",
+        "author": "C.S. Lewis",
+        "date": "1950-10-16"
+    },
+    {
+        "name": "The Da Vinci",
+        "author": "Dan Brown",
+        "date": "2003-03-18"
+    },
+    {
+        "name": "Alice's Adventures",
+        "author": "Lewis Carroll",
+        "date": "1865-11-26"
+    },
+    {
+        "name": "The Hunger Games",
+        "author": "Suzanne Collins",
+        "date": "2008-09-14"
+    },
+    {
+        "name": "The Maze Runner",
+        "author": "James Dashner",
+        "date": "2009-10-06"
+    },
+    {
+        "name": "Divergent",
+        "author": "Veronica Roth",
+        "date": "2011-04-25"
+    }
+]
