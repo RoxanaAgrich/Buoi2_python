@@ -150,6 +150,7 @@ while True:
         menu[0]()
         break
     
+    #lambda: hàm ẩn danh
     result = menu.get(nhap, lambda: print("Chức năng không hợp lệ. Vui lòng chọn lại."))
 
     result()
